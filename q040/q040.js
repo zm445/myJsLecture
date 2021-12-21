@@ -28,7 +28,6 @@ for(let i=0; i<com.length; i++){
 }
 br();
 
-
 // 내 랜덤숫자 6개 출력
 dw("나: &nbsp&nbsp&nbsp&nbsp&nbsp");
 for(let i=0; i<me.length; i++){

@@ -106,7 +106,7 @@ for(let i=0; i<com.length; i++){
 resultString = "";
 
 // 컴퓨터 랜덤숫자 6개 출력
-resultString += "컴: ";
+resultString += "컴퓨터: ";
 for(let i=0; i<com.length; i++){
     resultString += com[i] + " ";
 }
