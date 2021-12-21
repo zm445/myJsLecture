@@ -6,8 +6,7 @@ function y() {
 }
 
 function c(num1, num2) {
-   return num1 + num2;
+   return parseInt(num1 + num2);
 }
 
-var result = c(x(), y());
-dw(result);
+dw(c( x(), y() ));
