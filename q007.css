@@ -1,0 +1,33 @@
+#cat_flex_row_area{
+    display: grid;    
+    background-color: gray;
+    width:1000px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cat_flex_box{
+    display: flex;
+    flex-direction: column;    
+    width:80px;
+
+    border:10px solid pink;
+    border-radius: 20px;    
+}
+.cat {
+    width:80px;
+    height:80px;    
+}
+
+.cat_number {
+    width:80px;    
+    background-color: green;
+}
+
+#cat_x{
+    display: flex;
+    flex-direction: column;    
+    width:80px;
+    
+    border: 10px solid gold;
+    border-radius: 20px;
+}

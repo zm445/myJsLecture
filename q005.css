@@ -1,0 +1,6 @@
+#cat{
+    width: 100px;
+    height: 100px;
+    border: 10px dotted red;
+    border-radius: 30px;
+}
