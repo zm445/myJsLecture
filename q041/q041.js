@@ -66,7 +66,6 @@ let loop = 1;
 while(loop) {
 
     bonus = Math.floor(Math.random() * 45) + 1;
-
     for(let i=0; i<me.length; i++) {
         if(me[i] == bonus) {
             loop++;
@@ -85,13 +84,11 @@ while(loop) {
 
 // 컴퓨터의 6개의 숫자와 내 숫자를 비교 후 일치한 만큼 변수(count)에 누적시키기
 let count = 0;
-let idx = 0;
 for(let i=0; i<com.length; i++){
     for(let j=0; j<me.length; j++){
         if(com[i] == me[j]) {
-            ol[idx] = com[i];
+            ol[count] = com[i];
             count++;        
-            idx++;
         }
     }
 }
@@ -121,7 +118,7 @@ resultString += "\n";
 
 // 일치하는 숫자 출력
 resultString += "일치하는 숫자 : ";
-if(idx == 0) {
+if(count == 0) {
     resultString += "없음 ";
 } else {
     for(let i=0; i<count; i++){
