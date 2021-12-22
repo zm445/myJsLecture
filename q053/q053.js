@@ -7,7 +7,7 @@ function Monster(name, hp, attack) {
     this.hp = hp;
     this.attack = attack;
     this.info = function() {
-        return "이름: " + this.name + "<br>최대 채력: " + hp + "<br>현재 채력: " + this.hp + "<br>공격력: " + this.attack + "<br><br>";
+        return "이름: " + this.name + "[" + hp + "/" + this.hp + "]<br><br>";
     }
 }
 
@@ -16,7 +16,7 @@ function Player(name, hp, attack) {
     this.hp = hp;
     this.attack = attack;
     this.info = function() {
-        return "이름: " + this.name + "<br>최대 채력: " + hp + "<br>현재 채력: " + this.hp + "<br>공격력: " + this.attack + "<br><br>";
+        return "이름: " + this.name + "[" + hp + "/" + this.hp + "]<br><br>";
     }
 }
 
@@ -40,8 +40,8 @@ elf.hp -= M;
 var P = getRandomAttackValue(elf.attack);
 orc.hp -= P;
 
-dw("해적왕이 루피에게 " + M + "의 피해를 입혔습니다.<br> <br>");
+dw("<br> <br> 해적왕이 루피에게 " + M + "의 피해를 입혔습니다.<br> <br>");
 dw(orc.info());
-dw("루피가 해적왕에게 " + P + "의 피해를 입혔습니다.<br> <br>");
+dw("<br> <br> 루피가 해적왕에게 " + P + "의 피해를 입혔습니다.<br> <br>");
 dw(elf.info());
 
