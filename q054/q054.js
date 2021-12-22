@@ -9,12 +9,6 @@ hr();
 dw("전투 시작");
 hr();
 
-function getRandomAttackValue(attack){						
-	attack = attack + 1;    					
-	var random = Math.floor(Math.random()*attack);  			
-	return random;					
-}
-
 // 해적왕 선공
 var monsterD = getRandomAttackValue(orc.attack);
 elf.hp -= monsterD;
