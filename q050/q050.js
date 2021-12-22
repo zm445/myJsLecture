@@ -7,7 +7,7 @@ function Monster(name, hp, attack) {
     }
 }
 
-function player(name, hp, attack) {
+function Player(name, hp, attack) {
     this.name = name;
     this.hp = hp;
     this.attack = attack;
@@ -17,11 +17,9 @@ function player(name, hp, attack) {
 }
 
 orc = new Monster("해적왕", 120, 80);
+elf = new Player("루피", 80, 40);
 
 orc.infoScreen();
-
-elf = new player("루피", 80, 40);
-
 elf.infoScreen();
 
 
