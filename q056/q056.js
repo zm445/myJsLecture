@@ -1,23 +1,5 @@
-function Monster(name, hp, attack) {
-    this.name = name;
-    this.hp = hp;
-    this.attack = attack;
-    this.info = function() {
-        return this.name + "[" + hp + "/" + this.hp + "]<br><br>";
-    }
-}
-
-function Player(name, hp, attack) {
-    this.name = name;
-    this.hp = hp;
-    this.attack = attack;
-    this.info = function() {
-        return this.name + "[" + hp + "/" + this.hp + "]<br><br><br>";
-    }
-}
-
-var orc = new Monster("해적왕", 130, 70);
-var elf = new Player("루피", 80, 40);
+var orc = new Monster("브론즈", 100, 100);
+var elf = new Player("CARPE", 10000, 62);
 
 dw(orc.info());
 dw(elf.info());
@@ -26,22 +8,47 @@ hr();
 dw("전투 시작");
 hr();
 
-function getRandomAttackValue(attack){						
-	attack = attack + 1;    					
-	var random = Math.floor(Math.random()*attack);  			
-	return random;					
+
+let loop = true;
+while(loop) {
+    loop = BattleTurn();
 }
 
-// 해적왕 선공
-var monsterD = getRandomAttackValue(orc.attack);
-elf.hp -= monsterD;
+function BattleTurn() {
+    var monsterD = getRandomAttackValue(orc.attack);
+    var playerD = getRandomAttackValue(elf.attack);
 
-// 루피 공격
-var playerD = getRandomAttackValue(elf.attack);
-orc.hp -= playerD;
+    dw(orc.info());
+    dw(elf.info());
+    hr();
 
-dw("<br> <br> "+ orc.name +"이 "+ elf.name + "에게 " + monsterD + "의 피해를 입혔습니다.<br> <br>");
-dw(orc.info());
-dw("<br> <br> " + elf.name + "가 " + orc.name + "에게 " + playerD + "의 피해를 입혔습니다.<br> <br>");
-dw(elf.info());
+    dw(orc.name +"가 "+ elf.name + "에게 " + monsterD + "의 피해를 입혔습니다.<br>");
+    dw(elf.name + "가 " + orc.name + "에게 " + playerD + "의 피해를 입혔습니다.<br>");
 
+    elf.hp -= monsterD;
+    orc.hp -= playerD;
+
+    dw(orc.info());
+    dw(elf.info());
+    hr();
+
+    if(orc.hp <= 0 && elf.hp > 0) {
+        dw("승리<br>");
+
+        elf.xp += orc.xp;
+        orc.xp = 0;
+        dw(orc.info());
+        dw(elf.info());
+    
+        return false;
+    } 
+    if(orc.hp <= 0 && elf.hp <= 0) {
+        dw("무승부");
+        return false;
+    }
+    if(orc.hp > 0 && elf.hp <= 0) {
+        dw("패배");
+        return false;
+    }
+    return true;
+}
