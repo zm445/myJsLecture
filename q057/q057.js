@@ -1,5 +1,5 @@
 var orc = new Monster("롤 대리기사", 100, 100);
-var elf = new Player("페이커", 1000, 62);
+var elf = new Player("페이커", 1000, 150);
 
 dw(orc.info());
 dw(elf.info());
@@ -33,7 +33,7 @@ function BattleTurn() {
     hr();
 
     if(orc.hp <= 0 && elf.hp > 0) {
-        dw("승리 <br>");
+        dw("페이커 승리 [2부리그 출신 대리기사, 현직 프로게이머 페이커 선수에게 경험치 100을 주고 사망]<br><br>");
 
         elf.xp += orc.xp;
         orc.xp = 0;
