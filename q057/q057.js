@@ -1,0 +1,54 @@
+var orc = new Monster("롤 대리기사", 100, 100);
+var elf = new Player("페이커", 1000, 150);
+
+dw(orc.info());
+dw(elf.info());
+
+hr();
+dw("전투 시작");
+hr();
+
+
+let loop = true;
+while(loop) {
+    loop = BattleTurn();
+}
+
+function BattleTurn() {
+    var monsterD = getRandomAttackValue(orc.attack);
+    var playerD = getRandomAttackValue(elf.attack);
+
+    dw(orc.info());
+    dw(elf.info());
+    hr();
+
+    dw(orc.name +"가 "+ elf.name + "에게 " + monsterD + "의 피해를 입혔습니다.<br>");
+    dw(elf.name + "가 " + orc.name + "에게 " + playerD + "의 피해를 입혔습니다.<br><br>");
+
+    elf.hp -= monsterD;
+    orc.hp -= playerD;
+
+    dw(orc.info());
+    dw(elf.info());
+    hr();
+
+    if(orc.hp <= 0 && elf.hp > 0) {
+        dw("페이커 승리 [2부리그 출신 대리기사, 현직 프로게이머 페이커 선수에게 경험치 100을 주고 사망]<br><br>");
+
+        elf.xp += orc.xp;
+        orc.xp = 0;
+        dw(orc.info());
+        dw(elf.info());
+    
+        return false;
+    } 
+    if(orc.hp <= 0 && elf.hp <= 0) {
+        dw("무승부");
+        return false;
+    }
+    if(orc.hp > 0 && elf.hp <= 0) {
+        dw("페이커 패배");
+        return false;
+    }
+    return true;
+}
