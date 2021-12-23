@@ -1,0 +1,10 @@
+#input_button {
+    display: flex;
+}
+
+#result_screen {
+    background-color: whitesmoke;
+    width: 500px;
+    height: 300px;
+    margin-top: 80px;
+}
