@@ -5,6 +5,6 @@ function Monster(name, hp, attack) {
     this.xp = 100;
 
     this.info = function() {
-        return "["+ this.name + "(" + hp + "/" + this.hp + ") xp: "+ this.xp + " ]\n";
+        return "["+ this.name + "(" + hp + "/" + this.hp + ") xp: "+ this.xp + " ]";
     }
 }
