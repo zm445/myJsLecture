@@ -1,0 +1,20 @@
+#screen_message_box {
+    width: 400px;
+    height: 500px;
+    background-color: pink;
+}
+#screen_player_info {
+    width: 220px;
+    height: 180px;
+    background-color: whitesmoke;
+}
+#screen_monster_info {
+    width: 140px;
+    height: 180px;
+    background-color: whitesmoke;
+}
+#screen_turn {
+    width: 70px;
+    height: 15px;
+    background-color: yellow;
+}

@@ -1,0 +1,20 @@
+#screenMessageBox {
+    width: 400px;
+    height: 500px;
+    background-color: pink;
+}
+#screenPlayerInfo {
+    width: 220px;
+    height: 180px;
+    background-color: whitesmoke;
+}
+#screenMonsterInfo {
+    width: 220px;
+    height: 180px;
+    background-color: violet;
+}
+#screenTurn {
+    width: 70px;
+    height: 15px;
+    background-color: yellow;
+}
