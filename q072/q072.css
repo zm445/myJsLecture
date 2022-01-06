@@ -1,0 +1,20 @@
+#login {
+    background-color: beige;
+    width: 300px;
+    height: 300px;
+}
+
+#login_id {
+    width: 250px;
+    float: left;
+}
+
+#login_pw {
+    width: 250px;
+    float: left;
+}
+
+#but {
+    width: 250px;
+    float: left;
+}

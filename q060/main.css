@@ -1,15 +1,10 @@
 #screenMessageBox {
-    width: 400px;
-    height: 500px;
+    width: 800px;
+    height: 600px;
     background-color: pink;
 }
 #screenPlayerInfo {
     width: 400px;
     height: 300px;
     background-color: whitesmoke;
-}
-#screenTurn {
-    width: 70px;
-    height: 15px;
-    background-color: yellow;
 }

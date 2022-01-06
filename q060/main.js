@@ -32,41 +32,33 @@ function endBattle() {
 
 }
 
-var turn = 0;
-var end = 0;
-
 function procBattleTurn() {
-    if(end == 0) {       
-        // 공격 메세지 출력 추가( ex. 오크전사가 엠피스에게 데미지를 10 입혔습니다. )
-        var monsterDamage = getRandomAttackValue(orc.attack);
-        var playerDamage = getRandomAttackValue(elf.attack);
-    
-        orc.currentHp = orc.currentHp - playerDamage;
-        //todo 출력 전환
-        tv(elf.name + "가 " + orc.name + "에게 데미지를 " + playerDamage + " 입혔습니다.\n");
-        elf.currentHp = elf.currentHp - monsterDamage;
-        //todo 출력 전환
-        tv(orc.name + "가 " + elf.name + "에게 데미지를 " + monsterDamage + " 입혔습니다.\n");
-        
-        //턴 
-        turn++;
-        tvTurn("턴: "+ turn + "번");
+    // 공격 메세지 출력 추가( ex. 오크전사가 엠피스에게 데미지를 10 입혔습니다. )
+    var monsterDamage = getRandomAttackValue(orc.attack);
+    var playerDamage = getRandomAttackValue(elf.attack);
 
-        console.log("turn: " + turn);
+    orc.currentHp = orc.currentHp - playerDamage;
+    //todo 출력 전환
+    tv(elf.name + "가 " + orc.name + "에게 데미지를 " + playerDamage + " 입혔습니다.\n");
+    elf.currentHp = elf.currentHp - monsterDamage;
+    //todo 출력 전환
+    tv(orc.name + "가 " + elf.name + "에게 데미지를 " + monsterDamage + " 입혔습니다.\n");
 
-        // hp 검사하기
-        if (elf.currentHp <= 0 || orc.currentHp <= 0) {
-            endBattle();    // 전투 종료 처리
-            displayCharactersInfo();
-            end = -1;
-        } else {
-            displayCharactersInfo();
-        }
 
+
+    // hp 검사하기
+    if (elf.currentHp <= 0 || orc.currentHp <= 0) {
+        endBattle();    // 전투 종료 처리
+        displayCharactersInfo();
+        return false;
     } else {
-        tv("게임 오버\n");
+        displayCharactersInfo();
+        return true;
     }
 }
+
+
+
 
 var screen;
 var orc = new Monster("오크전사", 100, 10);
@@ -76,8 +68,17 @@ window.onload = function () {
     screen = document.getElementById("screen");
 
     displayCharactersInfo();
-    
+
+
+    //todo 출력 전환    
     tv("전투 시작\n");
+
+    //전투 무한 루프 처리
+    var loop = true;
+    while (loop) {
+        loop = procBattleTurn();
+    }
+
 }
 
 

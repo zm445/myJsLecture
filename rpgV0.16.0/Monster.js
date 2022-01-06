@@ -5,11 +5,10 @@ function Monster(name,hp,attack){
     this.maxHp = hp;    // 최대체력
     this.attack = attack; // 공격력
     this.exp = 100;   // 경험치
-    this.money = 10;   // 몬스터 사망시 나오는 돈
+    this.money = 10;   // 돈
     /* 멤버함수, 멤버메소드 */
     this.info = function(){
         //todo 출력 전환
-        tv("["+this.name+"("+this.currentHp + "/" + this.maxHp+")]");
-        tvPlayer("["+this.name+"("+this.currentHp + "/" + this.maxHp+")]\n");
+        tvGameObject("["+this.name+"("+this.currentHp + "/" + this.maxHp+")]");
     }
 }

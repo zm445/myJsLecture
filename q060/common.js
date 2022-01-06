@@ -13,10 +13,6 @@ function tvPlayer(str){    // var str; var str = "고양이";
     screenPlayerInfo.value = screenString;
     // document.write(str);
 }
-function tvTurn(str){    
-    screenTurn.value = str;
-}
-
 function br(){
     document.write("<br>");
 }

@@ -10,6 +10,7 @@ function Character(name,hp,attack){
     this.info = function(){
         // [엠피스(70/100)]<exp: 100>
         //todo 출력 전환
-        tvPlayer("["+this.name+"("+this.currentHp + "/" + this.maxHp+")](exp: "+this.exp+"/300)\n");
+        tv("["+this.name+"("+this.currentHp + "/" + this.maxHp+")](exp: "+this.exp+"/300)");
+        tvPlayer("["+this.name+"("+this.currentHp + "/" + this.maxHp+")](exp: "+this.exp+"/300)");
     }
 }
