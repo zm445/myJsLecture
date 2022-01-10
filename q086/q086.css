@@ -1,0 +1,54 @@
+#screen {
+    width: 1200px;
+    height: 1000px;
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+#top {
+    width: 1200px;
+    height: 200px;
+    background-color: pink;
+    float: left;
+}
+
+#left {
+    width: 600px;
+    height: 600px;
+    background-color: green;
+    float: left;
+}
+
+#right {
+    width: 600px;
+    height: 600px;
+    background-color: blueviolet;
+    float: left;
+}
+
+#bottom {
+    width: 1200px;
+    height: 200px;
+    background-color: yellow;
+    float: left;
+}
+
+#popup {
+    width: 450px;
+    height: 450px;
+    background-color: pink;
+    position: absolute;
+    display: flex;
+    margin-top: 300px;
+    margin-left: 380px;
+}
+
+#check {
+    margin-top: 420px;
+    margin-left: 15px;
+}
+
+#text {
+    margin-top: 415px;
+    margin-left: 5px;
+}

@@ -1,6 +1,6 @@
 #login {
-    width: 250px;
-    height: 300px;
+    width: 500px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,41 +16,43 @@
 }
 
 #login_id {
-    width: 200px;
-    height: 30px;
-    margin-bottom: 10px;
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
 }
 
 #login_pw {
-    width: 200px;
-    height: 30px;
-    margin-bottom: 10px;
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
 }
 
 .but {
-    width: 208px;
-    height: 40px;
-    background-color: purple;
+    width: 416px;
+    height: 80px;
+    background-color: #5d16a2;
     color: white;
-    border: 1px solid purple;
-    margin-bottom: 6px;
+    border: 2px solid #5d16a2;
+    margin-bottom: 12px;
     text-align: center;
+    font-size: 18px;
 }
 
 .but2 {
-    width: 208px;
-    height: 40px;
+    width: 416px;
+    height: 80px;
     background-color: white;
-    color: purple;
-    border: 1px solid purple;
+    color: #5d16a2;
+    border: 2px solid #5d16a2;
     text-align: center;
+    font-size: 17px;
 }
 
 .logo {
     margin-top: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     color: black;
-    font-size: 17px;
+    font-size: 27px;
 }
 
 #sign_up {
