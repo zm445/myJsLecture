@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="q082.css">
+    <script src="q082.js"></script>
+    <script src="reg_member.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div id="sign_up">    
+            <div id="logo">
+                <img src="NAVER_LOGO2.png" class="image"></a>
+            </div>
+            <div id="input_info">
+                <h3 class="ex_input_info">아이디</h3>
+                <input id="input_id" class="input" type="text" maxlength="6" minlength="2">  
+                <h3 class="ex_input_info">비밀번호</h3>      
+                <input id="input_pw" class="input" type="password">
+                <h3 class="ex_input_info">비밀번호 재확인</h3>
+                <input id="input_pw2" class="input" type="password">
+                <h3 class="ex_input_info">이름</h3>
+                <input id="input_name" class="input" type="text">
+                <h3 class="ex_input_info">생년월일</h3>
+                <input id="input_birth" class="input" type="date" placeholder="ex)19701124">
+                <h3 class="ex_input_info">성별</h3>
+                <select name="sex" id="sex-select" class="input">
+                    <option value="m">남자</option>
+                    <option value="w">여자</option>
+                </select>
+                <h3 class="ex_input_info">본인 확인 이메일</h3>
+                <input id="input_email" class="input" type="text" placeholder="선택입력">	
+                <h3 class="ex_input_info">휴대전화</h3>
+                <input id="input_phone_num" class="input" type="tel" placeholder="전화번호 입력" maxlength="13">
+                <input id="sign_up_button" type="submit" value="가입하기" onclick="sign_up();">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
