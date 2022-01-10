@@ -1,0 +1,114 @@
+#login {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto; 
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 5px 5px;	
+}
+
+#login_id {
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+#login_pw {
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.but {
+    width: 416px;
+    height: 80px;
+    background-color: #5d16a2;
+    color: white;
+    border: 2px solid #5d16a2;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.but2 {
+    width: 416px;
+    height: 80px;
+    background-color: white;
+    color: #5d16a2;
+    border: 2px solid #5d16a2;
+    text-align: center;
+    font-size: 17px;
+}
+
+.logo {
+    margin-top: 0px;
+    margin-bottom: 80px;
+    color: black;
+    font-size: 27px;
+}
+
+#sign_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 1500px;
+    height: 1200px;
+    margin:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#logo {
+    width: 500px;
+    height: 150px;
+    margin: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input_info {
+    width: 800px;
+    margin: auto;
+    margin-left: 525px;
+    margin-bottom: 210px;
+}
+
+.image {
+    height: 42px;
+    padding: 30px;
+}
+
+.input{
+    width: 444px;
+    height: 45px;
+    border: 1px solid #e9e9e9;
+}
+
+#sign_up_button {
+    width: 452px;
+    height: 50px;
+    margin-top: 20px;
+    color: white;
+    background-color: #00C73C;
+    border: 1px solid #00C73C;
+    font-size: 18px;
+}
+
+.ex_input_info {
+    font-size: 13.5px;
+}
