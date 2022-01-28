@@ -1,0 +1,43 @@
+#k{
+    display: flex;
+    height: 100vh;
+}
+
+#sign_up{
+    margin: auto;  
+    text-align: center;
+    background-color: #e0e0e0;
+    width: 350px;
+    height: 380px;
+}
+
+#logo{
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.i{
+    width: 260px;
+    height: 27px;
+    margin-top: 8px;
+    border: 1px solid #F6F6F6;
+    border-radius: 5px;
+}
+
+#c {
+    width: 268px;
+    height: 27px;
+    margin-top: 8px;
+    border: 1px solid #F6F6F6;
+    border-radius: 5px;
+}
+
+.b{
+    margin-top: 22px;
+    color: white;
+    background-color: black;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
